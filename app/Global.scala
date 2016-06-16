@@ -40,6 +40,14 @@ object Global extends GlobalSettings {
         password = "123456"
       ),
         Account(
+        idSpecialization = Some(1),
+        email = "elias@elias.ro",
+        lastName = "Elias",
+        firstName = "Apascaritei",
+        role = SuperUser,
+        password = "123456"
+      ),
+        Account(
           idSpecialization = Some(1),
           email = "normaluser@frunza.ro",
           lastName = "Normal",
