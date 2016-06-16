@@ -31,14 +31,7 @@ object Global extends GlobalSettings {
     }
 
     if (Accounts.isTableEmpty) {
-      Seq(Account(
-        idSpecialization = Some(1),
-        email = "superuser@frunza.ro",
-        lastName = "Super",
-        firstName = "User",
-        role = SuperUser,
-        password = "123456"
-      ),
+      Seq(
         Account(
         idSpecialization = Some(1),
         email = "elias@elias.ro",
@@ -50,6 +43,14 @@ object Global extends GlobalSettings {
         Account(
           idSpecialization = Some(1),
           email = "normaluser@frunza.ro",
+          lastName = "Normal",
+          firstName = "User",
+          role = NormalUser,
+          password = "123456"
+        ),
+        Account(
+          idSpecialization = Some(1),
+          email = "normaluser@elias.ro",
           lastName = "Normal",
           firstName = "User",
           role = NormalUser,
