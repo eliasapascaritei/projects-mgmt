@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <script type='text/javascript' src='@routes.Assets.at("vendor/jquery/jquery.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("vendor/angular/angular.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("vendor/angular-animate/angular-animate.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("vendor/angular-resource/angular-resource.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("vendor/angular-ui-router/release/angular-ui-router.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("javascripts/bootstrap.min.js")'></script>
+
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/app.js")'></script>
+
+        <link rel="stylesheet" href="@routes.Assets.at("vendor/bootstrap/css/bootstrap.min.css")" />
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/superUser.css")" />
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.css")" />
+                <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    </head>
+    <div ui-view></div>
+    <body ng-app="studApp">
+            <!-- =========== MODELS ==================== -->
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/models/profile/user.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/models/university.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/models/specialization.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/models/university.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/models/course.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/models/project.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/models/student.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/models/contact.js")'></script>
+            <!-- =========== CONTROLLERS =============== -->
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/controllers/profile/ProfileController.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/controllers/HomeController.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/controllers/AddProjectController.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/controllers/ProjectController.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/controllers/LocationController.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/controllers/addStudentsController.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/controllers/ContactController.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/SuperUser/controllers/UserController.js")'></script>
+    </body>
+</html>
+
+

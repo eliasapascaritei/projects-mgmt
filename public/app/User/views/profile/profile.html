@@ -1,0 +1,21 @@
+<div class="profile">
+	<div class="container">
+		<div class="col-sm-6">
+			<img class="avatar-md center-block" ng-src="{{userPic}}" alt="">
+		</div>
+		<div class="col-sm-6">
+			<article class="widget  effect1">
+				<a ng-hide="userDetails.savedUniversity" ui-sref="profile.not-complete"><p class="widget-title text-center">Complete profile !</p></a>
+				<div ng-show="userDetails.savedUniversity">
+					<p>
+						<b>You study: </b>{{userDetails.savedUniversity.name}}
+					</p>
+					<p>
+						<b>At: </b>{{userDetails.selectedUniv.name}}
+					</p>
+				</div>
+			</article>
+			<div ui-view></div>
+		</div>
+	</div>
+</div>

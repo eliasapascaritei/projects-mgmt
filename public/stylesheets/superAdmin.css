@@ -1,0 +1,10 @@
+@import url('base.css');
+
+.res-grid {
+	height: 80px;
+}
+.glyphicon.glyphicon-remove.remove-Uris,
+.glyphicon.glyphicon-plus.add-Uris {
+	line-height: 30px;
+	cursor: pointer;
+}

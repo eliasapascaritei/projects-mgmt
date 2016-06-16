@@ -1,0 +1,79 @@
+<html ng-app="studApp">
+<head><!--
+<link rel="stylesheet" href="stylesheets/superUser.css" />
+ <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+ <link href="stylesheets/bootstrap.css" rel="stylesheet">-->
+</head>
+<body>
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="logo" href="#/">
+                <img src="assets/images/logo.png" >
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" ng-controller="LocationController">
+
+                <li class="active">
+                    <a href="" data-ng-click="showHome()">Home</a>
+                </li>
+                <li>
+                    <a href="" data-ng-click="showStudents()">Students</a>
+                </li>
+                <li>
+                    <a href="" data-ng-click="showContact()">Contact</a>
+                </li>
+
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="title" >
+        <h1> Project Management</h1>
+    </div>
+
+    <div class="panel panel-default panel-featured m-top-40" style="width: 602px;">
+        <div loader class="overlap-parent white-spinner ">
+            <div class="loader"></div>
+        </div>
+        <div class="panel-heading">
+            UPLOAD PROJECT
+        </div>
+        <div class="panel-body p-hr-0 row">
+            <form name="TypeOfPlan" class="form-horizontal m-hr-80percent-min-md labels-align-left" role="form">
+                <div>
+                    <ul>
+                        <li>You can upload your project <b>only once</b></li>
+                        <li>An email with a project name and discipline will be sent to the professor</li>
+                        <li>If something went wrong please contact us at <b>support@work-app.com</b></li>
+                        <li>Upload the file for processing</li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <!-- <label for="inviteFile" class="col-sm-4 control-label">File</label> -->
+                    <div class="col-md-6 m-top-20">
+                        <input type="file" class="form-control remove-height" id="inviteFile" file-model="inviteFile" name="inviteFile">
+                    </div>
+                </div>
+                <div class="form-group text-center m-top-20">
+                    <button class="btn btn-lg btn-danger" ng-hide="uploaded" ng-click="uploadFile()">Upload</button>
+                    <button class="btn btn-lg btn-success disabled" ng-show="uploaded">Project succesfully sent</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

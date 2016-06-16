@@ -1,0 +1,54 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+##6C6C6C
+# Home page
+GET           /                                                   controllers.ApplicationController.dashboard
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file                                       controllers.Assets.at(path="/public", file)
+
+GET           /login                                              controllers.ApplicationController.index
+POST          /login                                              controllers.AuthController.login
+GET           /logout                                             controllers.ApplicationController.logout
+
+GET           /plm                                                controllers.AuthController.bagPL
+
+GET           /account/password/change/:hash                      controllers.AuthController.passwordChangeView(hash: String)
+POST          /account/password/change                            controllers.AuthController.passwordChange
+
+#SuperUser
+GET           /api/superuser/course                               controllers.SuperUserController.findCourses
+GET           /api/superuser/course/project                       controllers.SuperUserController.findCourseProjects
+POST          /api/superuser/course                               controllers.SuperUserController.saveCourse
+DELETE        /api/superuser/course/:idCourse                     controllers.SuperUserController.deleteCourse(idCourse: Int)
+
+GET           /api/superuser/project/course/:idCourse             controllers.SuperUserController.findCourseByProject(idCourse: Int)
+POST          /api/superuser/project                              controllers.SuperUserController.saveProject
+PUT           /api/superuser/project/take/:idProject              controllers.SuperUserController.takeProject(idProject: Int)
+GET           /api/superuser/project/:idProject                   controllers.SuperUserController.findProject(idProject: Int)
+DELETE        /api/superuser/project/:idProject                   controllers.SuperUserController.deleteProject(idProject: Int)
+
+POST          /api/superuser/user                                 controllers.SuperUserController.saveUser
+GET           /api/superuser/user/:idUser                         controllers.SuperUserController.findUser(idUser: Int)
+GET           /api/superuser/user                                 controllers.SuperUserController.findUsers
+PUT           /api/superuser/user                                 controllers.SuperUserController.updateUser
+
+#NormalUser
+GET           /api/normaluser/specialization                      controllers.NormalUserController.findSpecializations
+GET           /api/normaluser/course/special                      controllers.NormalUserController.findSpecialCourses
+GET           /api/normaluser/course/special/:idUser              controllers.NormalUserController.findUserCourses(idUser: Int)
+
+GET           /api/normaluser/project/year/:year                  controllers.NormalUserController.findYearProjects(year: Int)
+GET           /api/normaluser/project                             controllers.NormalUserController.findProjects
+GET           /api/normaluser/project/:idProject                  controllers.NormalUserController.findProject(idProject: Int)
+GET           /api/normaluser/project/course/:idCourse            controllers.NormalUserController.findCourseProjects(idCourse: Int)
+POST          /api/normaluser/project                             controllers.NormalUserController.saveProject
+POST          /api/normaluser/project/:idProject                  controllers.NormalUserController.findProject(idProject: Int)
+POST          /api/normaluser/project/assign/:idProject           controllers.NormalUserController.assignProject(idProject: Int)
+
+POST          /api/normaluser/upload/:idProject/:extension        controllers.NormalUserController.uploadFile(idProject: Int, extension: String)
+GET           /api/normaluser/download/:idProject                 controllers.NormalUserController.downloadFile(idProject: Int)
+
+POST          /api/normaluser/contact                             controllers.NormalUserController.sendContact
+

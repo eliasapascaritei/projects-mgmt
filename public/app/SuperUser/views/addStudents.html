@@ -1,0 +1,112 @@
+<html ng-app="studApp">
+<head><!--
+<link rel="stylesheet" href="stylesheets/superUser.css" />
+ <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+ <link href="stylesheets/bootstrap.css" rel="stylesheet">-->
+</head>
+<body>
+	<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+       <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="#/">
+                    <img src="assets/images/logo.png" >
+                </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" ng-controller="LocationController">
+
+                    <li class="active">
+                        <a href="" data-ng-click="showHome()">Home</a>
+                    </li>
+                    <li>
+                        <a href="" data-ng-click="showStudents()">Students</a>
+                    </li>
+                    <li>
+                        <a href="" data-ng-click="showContact()">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="/logout">Logout</a>
+                    </li>
+
+                 </ul>
+          </div>
+    </div>
+  </nav>
+
+<div class="container">
+      <div class="title" >
+        <h1> Add Students</h1>
+      </div>
+
+<div class="row">
+      
+      <div class= "col-md-4">
+
+        <form name ="students">
+               
+              <input type ="text" name= "firstname" placeholder="First Name" class ="inputStudents" data-ng-model="firstName" required>
+              <span ng-show =" students.firstname.$dirty && students.firstname.$error.required" >Required
+              </span>
+              
+              <input type ="text" name ="lastName" placeholder="Last Name" class ="inputStudents" data-ng-model="lastName" required>
+              <span ng-show ="students.lastName.$dirty && students.lastName.$error.required" >*! </span>
+
+
+              <input type ="text" name="year" placeholder="Year" class ="inputStudents" data-ng-model="year" required>
+              <span ng-show =" students.year.$dirty && students.year.$error.required" >*! </span>
+
+
+              <input type ="text" name="email" placeholder="Email" class ="inputStudents" data-ng-model="email" required>
+              <span ng-show =" students.email.$dirty && students.email.$error.required" >*! </span>
+              <span ng-show =" students.email.$error.email" >*! </span>
+
+              <select data-ng-model="special">
+                  <option ng-repeat="specialization in specializations" value="{{specialization.idSpecialization}}">{{specialization.name}}</option>
+              </select>
+
+                <br><br>
+              <button ng-disabled ="students.$invalid" type="button" class="btn btn-primary" data-ng-click="addStudent()"><h6> Create account</h6></button>
+        </form>
+      </div>
+
+      <div class="col-md-8">
+         <table class="table table-striped">
+             <thead>
+              <tr>
+                <td>No.</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Edit</td>
+
+              </tr>
+            </thead>
+                <tr ng-repeat="student in students" ng-init="index=0">
+                    <td>{{ $index+1 }}</td>
+                    <td><a href="">{{ student.lastName }} {{ student.firstName }}</a></td>
+                    <td>{{ student.email }}</td>
+                    <td><button data-ng-click="showStudent(student.idUser)" class="btn btn-danger>">Edit</button></td>
+
+                </tr>
+            </table>
+      </div>
+
+      </div>
+
+
+
+
+
+
+
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" scr="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+</body>

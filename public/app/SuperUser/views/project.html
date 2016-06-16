@@ -1,0 +1,89 @@
+<html ng-app="studApp">
+<head><!--
+<link rel="stylesheet" href="stylesheets/superUser.css" />
+ <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+ <link href="stylesheets/bootstrap.css" rel="stylesheet">-->
+</head> 
+<body>  
+    <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+       <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="#/">
+                    <img src="assets/images/logo.png" >
+                </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" ng-controller="LocationController">
+
+                <li class="active">
+                    <a href="" data-ng-click="showHome()">Home</a>
+                </li>
+                <li>
+                    <a href="" data-ng-click="showStudents()">Students</a>
+                </li>
+                <li>
+                    <a href="" data-ng-click="showContact()">Contact</a>
+                </li>
+
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+	<div class="container">
+    <div class="title" >
+		<h1> Project Management</h1>
+	</div>
+		<div class="row">
+            <div class ="col-md-2 col-sm-2">
+            </div>
+        <div class="col-md-8">
+            <table class="table table-striped">
+             <thead>
+              <tr>
+                <td>No.</td>
+                <td>Project name</td>
+                <td>Project description</td>
+                <td>Student name</td>
+                <td>Upload project</td>
+
+              </tr>
+            </thead>
+
+                <tr ng-repeat="pr in project" ng-init="index=0">
+                    <td>{{ $index+1 }}</td>
+                    <td>{{ pr.name }}</td>
+                    <td>{{ pr.description }}</td>
+                    <td>{{ pr.userName }}</td>
+                    <td><button  ng-class="{
+                            'btn btn-default': pr.s3Name != null,
+                            'btn btn-disabled': pr.s3Name == null,
+
+                        }" data-ng-click="download(pr.s3Name)">Download project</button>
+                    </td>
+                   
+                </tr>
+            </table>
+        </div>
+
+        <div class ="col-md-2 col-sm-2">
+        </div>
+
+    </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" scr="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+</div>
+</body>
+</html>

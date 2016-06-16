@@ -1,0 +1,64 @@
+@(message: Option[String])
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth User</title>
+    <link href="@routes.Assets.at("vendor/bootstrap/css/bootstrap.min.css")" rel="stylesheet">
+    <link href="@routes.Assets.at("stylesheets/form.css")" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="@routes.Assets.at("vendor/jquery/jquery.min.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("vendor/bootstrap/js/bootstrap.min.js")"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="pull-left">
+                <img src="@routes.Assets.at("images/logo.png")"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-container full-width-container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 col-md-push-3 col-lg-push-4">
+
+                <div class="panel panel-default panel-featured m-top-40">
+                    <div class="panel-body">
+                        <form class="form-horizontal col-sm-10 col-sm-push-3 m-b-25" id="registerHere" method="post" action="/login">
+                            <h1>Login</h1>
+                            <fieldset>
+                                <div class="control-group input-group input-group-lg m-top-20">
+                                    <span class="input-group-addon" id="identifier-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                    <input type="text" class="form-control input-xlarge" placeholder="Email" aria-describedby="identifier-addon" id="username" name="j_username" rel="popover" data-content="Enter your identifier." data-original-title="Identifier">
+                                </div>
+
+                                <div class="control-group input-group input-group-lg m-top-20">
+                                    <span class="input-group-addon" id="pass-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                    <input type="password" class="form-control input-xlarge" placeholder="Password" aria-describedby="pass-addon"  id="password" name="j_password" rel="popover" data-content="What's your password?" data-original-title="Password" />
+                                </div>
+                                @if(message.isDefined) {
+                                <div class="alert alert-danger alert-dismissible m-top-20" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    @message.get
+                                </div>
+                                }
+                            </fieldset>
+                            <div class="form-actions">
+                                <div class="height-25"><a href="/account/password/recover" class="forgot pull-right m-top-20 m-b-25">Forgot password?</a></div>
+                                <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

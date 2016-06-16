@@ -1,0 +1,93 @@
+<html ng-app="studApp">
+ 
+<body>  
+    <nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+       <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="#/">
+                    <img src="assets/images/logo.png" >
+                </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" ng-controller="LocationController">
+
+                <li class="active">
+                    <a href="" data-ng-click="showHome()">Home</a>
+                </li>
+                <li>
+                    <a href="" data-ng-click="showStudents()">Students</a>
+                </li>
+                <li>
+                    <a href="" data-ng-click="showContact()">Contact</a>
+                </li>
+
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container" >
+	<div class="title" >
+		<h1> Project Management</h1>
+	</div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <form name= "projectsFrm">
+                <input type ="text" name="namePrj" placeholder="Project Name" class ="inputstyle" data-ng-model="newProject.name" required>
+                <span ng-show ="projectsFrm.namePrj.$dirty && projectsFrm.namePrj.$error.required" >Required! </span>
+                <textarea rows="4" name="description" cols="50" placeholder="Description" class ="textarea" data-ng-model="newProject.description" required>
+                </textarea>
+                <span ng-show ="projectsFrm.description.$dirty && projectsFrm.description.$error.required" >Required! </span>
+
+                <br><br>
+                <button type="button" class="btn btn-primary" data-ng-click="addProject()"><h6> Adauga Proiect</h6></button>
+            </form>
+        </div>
+
+   <!--  <div class="col-md-2">
+            
+    </div> -->
+         <div class="col-md-9">
+            <table class="table table-striped">
+             <thead>
+              <tr>
+                <td>No.</td>
+                <td>Project name</td>
+                <td>Project description</td>
+                <td>Student name</td>
+                <td>Accept/Decline</td>
+                <td>Action</td>
+
+              </tr>
+            </thead>
+
+                <tr ng-repeat="project in projects" ng-init="index=0">
+                    <td>{{ $index+1 }}</td>
+                    <td>{{ project.name }}</td>
+                    <td>{{ project.description }}</td>
+                    <td>{{ project.stud_name }}</td>
+                    <td><input type="checkbox" class="checkbox" ng-click="takeProject(project.idProject)"  ng-show="project.isAccepted ===false;"></i>
+                    <img class="sad" src="assets/images/true.png" ng-show="project.isAccepted === true;"></i>
+                    </td>
+                    <td>
+                        <a href=""> <button type="button" class="btn btn-danger" data-ng-click="deleteProject(project)">Delete {{project.idProject}}</button></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+ </div>
+</body>
+

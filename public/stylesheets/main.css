@@ -1,0 +1,50 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.pad{
+  padding: 17%;
+}
+
+.pad2{
+  padding: 8%;
+}
+.navbar-fixed-top {
+  background-color: #000;
+  height: 68px;
+}
+.navbar-fixed-top li {
+  padding-left: 30px;
+}
+
+
+.navbar-fixed-top li a {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 69px;
+}
+.navbar-fixed-top li a:hover,
+.navbar-fixed-top li a:active {
+  color: #cc9900;
+  background-color: transparent;
+  text-decoration: none;
+}
+

@@ -1,0 +1,130 @@
+<html ng-app="studApp">
+<head><!--
+<link rel="stylesheet" href="stylesheets/superUser.css" />
+ <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+ <link href="stylesheets/bootstrap.css" rel="stylesheet">-->
+</head> 
+<body> 	
+	<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+       <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="#/">
+                    <img src="assets/images/logo.png" >
+                </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" ng-controller="LocationController">
+
+                <li class="active">
+                    <a href="" data-ng-click="showHome()">Home</a>
+                </li>
+                <li>
+                    <a href="" data-ng-click="showStudents()">Students</a>
+                </li>
+                <li>
+                    <a href="" data-ng-click="showContact()">Contact</a>
+                </li>
+
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<div class="container">
+	<div class="title" >
+		<h1> Project Management</h1>
+	</div>
+
+<div class="row">
+    <div class="col-md-3">
+
+<!-- 	  <div class="row-fluid">
+	<div class="col-md-3"> -->
+        <form name ="myForm" novalidate>
+		<input type ="text" name="courseName" placeholder="Course" class ="inputstyle" data-ng-model="courseName" required>
+        <span ng-show =" myForm.courseName.$dirty && myForm.courseName.$error.required" >Required! </span>
+          
+		<input type ="text" name= "yearCourse" placeholder="Year" class ="inputstyle" data-ng-model="newCourse.year" required ng-minlength="1" ng-maxlength ="1">
+        <span ng-show ="myForm.yearCourse.$dirty && myForm.yearCourse.$error.required" >Required! </span>
+        <span ng-show ="myForm.yearCourse.$dirty && myForm.yearCourse.$error.minlength" >insert correct year! </span>
+        <span ng-show ="myForm.yearCourse.$dirty && myForm.yearCourse.$error.maxlength" >insert correct year! </span>
+
+		<select data-ng-model="newCourse.specialization" >
+                    <option ng-repeat="specialization in specializations" value="{{specialization.id_special}}" >{{specialization.name}}</option>
+        </select>
+		
+            <br><br>
+			<button ng-disable ="myForm.$invalid" type="button" class="btn btn-primary" data-ng-click="addCourse()"><h6> Add course</h6></button>
+        </form>
+    </div>
+    <div class="col-md-9">
+
+	<div class="row-fluid" data-ng-repeat="course in courses">
+        <div class="col-md-6" >
+            <div class="materia-box">
+            <div class="title-materia">
+                <h5>{{course.name}} </h5>
+
+<!--                 <a class="boxclose" id="boxclose"></a>
+ -->
+                <div data-ng-repeat="project in course.projects">
+                    <div class="row">
+                        <div class = "col-md-8 col-sm-8">
+                            <a href="" data-ng-click="showProject(project.idProject)"  ng-init="index=0">
+                             <h3>  {{ $index+1 }} {{project.projectName}} - </h3>
+                            </a>
+                        </div>
+                        <div class= "col-md-4 col-sm-4">
+                            <a href="" data-ng-click="showUser(project.idUser)"  ng-init="index=0">
+                                <h3> {{project.userName}} </h3>
+                            </a>
+                        </div>
+                     </div>
+                            <div ng-show="!course.projects.length">
+                                    <h2>Acest curs nu are proiecte</h2>
+                            </div>
+
+                   
+                </div>
+
+                <a href="" class="center btn btn-default" data-ng-click="addProject(course.idCourse)">Add projects</a>
+            </div>
+
+            <br class="clear" />
+          </div>
+        </div>
+    </div>
+
+    </div>
+ 
+</div>
+
+</div>
+<!-- footer -->
+
+  
+<!--  <div id="footer" class="text-centered">
+ 		<ul>
+ 			<li>Created by </li>
+ 			<li>Facebook:</li>
+ 		</ul>
+ </div>
+ -->
+<!-- scripts  -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" scr="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+</body>

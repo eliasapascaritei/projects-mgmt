@@ -1,0 +1,85 @@
+<html ng-app="studApp">
+<head><!--
+<link rel="stylesheet" href="stylesheets/superUser.css" />
+ <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
+ <link href="stylesheets/bootstrap.css" rel="stylesheet">-->
+</head>
+<body>
+	<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+       <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="logo" href="#/">
+                    <img src="assets/images/logo.png" >
+                </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" ng-controller="LocationController">
+
+                <li class="active">
+                    <a href="" data-ng-click="showHome()">Home</a>
+                </li>
+                <li>
+                    <a href="" data-ng-click="showStudents()">Students</a>
+                </li>
+                <li>
+                    <a href="" data-ng-click="showContact()">Contact</a>
+                </li>
+
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+
+  <div class="container">
+      <div class="title" >
+        <h1> Report Problems</h1>
+      </div>
+
+<div class="row">
+      <div class="col-md-3">
+      </div>
+
+      <div class= "col-md-6">
+        <form name="contactFrm">
+
+         <input type ="text" name="repName"placeholder="Issue title" class ="inputStudents" data-ng-model="reporterName">
+          <span ng-show ="contactFrm.repName.$dirty && contactFrm.repName.$error.required" >*! </span>
+
+          <input type ="text" name="email" placeholder="Email" class ="inputStudents" data-ng-model="reporterEmail">
+           <span ng-show ="contactFrm.email.$dirty && contactFrm.email.$error.required" >*! </span>
+           <span ng-show ="contactFrm.email.$dirty && contactFrm.email.$error.email" >*! </span>
+
+          <textarea placeholder="Describe the problem" class ="textarea" data-ng-model="reporterDescription"></textarea>
+
+            <br><br>
+          <button type="button" class="btn btn-primary" data-ng-click="sendIssue()"><h6> Send</h6></button>
+        </form>
+
+      </div>
+
+      <div class="col-md-3">
+      </div>
+</div>
+
+
+
+
+
+
+
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" scr="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+</body>

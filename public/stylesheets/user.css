@@ -1,0 +1,217 @@
+
+/*navbar*/
+
+.navbar-fixed-top {
+  /*background-color: #F5F0EB;*/
+ background-image: -webkit-linear-gradient(top, #fffdfd, #e7e2de);
+  height: 60px;
+  border-bottom: 1px solid #669999;
+}
+.navbar-fixed-top li {
+  padding-left: 30px;
+}
+
+
+.navbar-fixed-top li a {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 69px;
+}
+.navbar-fixed-top li a:hover,
+.navbar-fixed-top li a:active {
+  color: #02444a;
+  text-decoration: none;
+  background-color: none;
+}
+
+.img_responsive {
+  position: relative;
+  width: 31.4286rem;
+  height: 25.7143rem;
+}
+  .logo {
+    width: 160px;
+    height: auto;
+
+  }
+
+.inputStudents{
+  margin-top: 5%;
+  height: 40px;
+  box-shadow: 0px 0px 3px #D6D6D6;
+  display: block;
+  width: 90%;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #A9A9A9;
+  background-color: #ffffff;
+  background-image: none;
+  border: 2px solid #DDD;
+  border-radius: 4px;
+}
+
+.btn-disabled{
+  cursor: none;
+}
+
+/*body*/
+
+.container {
+  max-width: 1300px;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: auto;
+  padding-bottom: 20px;
+  font-family: Lato, "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.center{
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  position: absolute;
+
+}
+
+.inputstyle, select, textarea {
+  margin-top: 25%;
+  height: 40px;
+  box-shadow: 0px 0px 3px #D6D6D6;
+  display: block;
+  width: 90%;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #A9A9A9;
+  background-color: #ffffff;
+  background-image: none;
+  border: 2px solid #DDD;
+  border-radius: 4px;
+
+}
+
+select{
+  margin-top: 20px !important;
+}
+
+
+button{
+  margin-top: 10%;
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  padding-right: 2%;
+}
+button h6{
+    font-size: 18px;
+    margin-top: 1px;
+
+}
+
+.title h1{
+  padding-top: 4%;
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 45px;
+  margin-left: -20px;
+}
+/*materia box*/
+
+.materia-box{
+    margin-top: 5%;
+    /*height: auto;*/
+    min-height: 30%;
+    width: 90%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(top, #fffdfd, #e7e2de);
+    overflow: auto;
+    overflow-x: hidden;
+    /*overflow-y: hidden;*/
+    position: relative;
+    font-size: 15px;
+
+}
+.materia-box h3{
+  font-size: 20px;
+  padding-left: 5%;
+  font-family: Lato, "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+}
+.clear { clear: both; }
+
+.title-materia{
+  height: 35px;
+  width: 100%;
+  background-color: #D5D5D5;
+  padding-bottom: 5%;
+  color: #fff;
+  top: 0;
+}
+
+.title-materia h5{
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 2px;
+  color: #fff;
+  margin-top: 0;
+  padding-top: 10px;
+  font-weight: 700;
+  text-align: center;
+
+}
+
+
+/*projects add*/
+
+.textarea {
+  margin-top: 10%;
+  width: 90%;
+  height: 80px;
+  color: #000;
+  border-radius: 5px;
+  padding-right: 2%;
+  font-size: 18px;
+  padding-left: 3px;
+}
+
+
+.sad{
+  width: 30px;
+  height: 30px;
+  margin-left: 30%;
+}
+/*table*/
+.table{
+  margin-top: 50px;
+}
+.table thead{
+  font-weight: 700;
+}
+/*footer*/
+/*#footer li{
+  display: inline;#D5D5D5
+    color: #02444a;
+}
+#footer ul{
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#footer {
+  background-color: #F5F0EB;
+    background-image: -webkit-linear-gradient(top, #e7e2de, #fffdfd);
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}
+*/

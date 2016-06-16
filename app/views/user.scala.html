@@ -1,0 +1,47 @@
+
+<html>
+    <head>
+<script type='text/javascript' src='@routes.Assets.at("vendor/jquery/jquery.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("vendor/angular/angular.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("vendor/angular-animate/angular-animate.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("vendor/angular-resource/angular-resource.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("vendor/angular-ui-router/release/angular-ui-router.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("javascripts/bootstrap.min.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/app.js")'></script>
+
+        <link rel="stylesheet" href="@routes.Assets.at("vendor/bootstrap/css/bootstrap.min.css")" />
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/user.css")" />
+        <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.css")" />
+                <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    </head>
+    <div ui-view></div>
+    <body ng-app="studApp">
+            <!-- =========== MODELS ==================== -->
+        <script type='text/javascript' src='@routes.Assets.at("app/User/models/profile/user.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/models/specialization.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/models/university.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/models/course.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/models/project.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/models/uploadProject.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/models/contact.js")'></script>
+            <!-- =========== CONTROLLERS =============== -->
+        <script type='text/javascript' src='@routes.Assets.at("app/User/controllers/profile/ProfileController.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/controllers/HomeController.js")'></script>
+         <script type='text/javascript' src='@routes.Assets.at("app/User/controllers/addProjects.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/controllers/UploadProjectController.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/controllers/ProjectDetails.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/controllers/LocationController.js")'></script>
+        <script type='text/javascript' src='@routes.Assets.at("app/User/controllers/ContactController.js")'></script>
+         <script type='text/javascript' src='@routes.Assets.at("app/User/controllers/UserProjectsController.js")'></script>
+    </body>
+</html>
+
+
