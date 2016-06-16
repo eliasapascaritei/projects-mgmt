@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="stylesheets/superUser.css" />
  <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
  <link href="stylesheets/bootstrap.css" rel="stylesheet">-->
-</head> 
+</head>
 <body> 	
 	<nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
@@ -22,17 +22,18 @@
             <ul class="nav navbar-nav navbar-right" ng-controller="LocationController">
 
                 <li class="active">
-                    <a href="" data-ng-click="showHome()">Home</a>
+
+                    <a href="" data-ng-click="showHome()"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li>
-                    <a href="" data-ng-click="showStudents()">Students</a>
+                    <a href="" data-ng-click="showStudents()"><i class="fa fa-eye" aria-hidden="true"></i> Students</a>
                 </li>
                 <li>
-                    <a href="" data-ng-click="showContact()">Contact</a>
+                    <a href="" data-ng-click="showContact()"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a>
                 </li>
 
-                <li>
-                    <a href="/logout">Logout</a>
+                <li >
+                    <a href="/logout" style="cursor: not-allowed"><i class="fa fa-lock" aria-hidden="true"></i> Logout</a>
                 </li>
 
             </ul>
@@ -67,21 +68,21 @@
         </select>
 		
             <br><br>
-			<button ng-disable ="myForm.$invalid" type="button" class="btn btn-primary" data-ng-click="addCourse()"><h6> Add course</h6></button>
+			<button ng-disable ="myForm.$invalid" type="button" class="btn btn-primary" data-ng-click="addCourse()"><h6><i class="fa fa-floppy-o" aria-hidden="true"></i> Add course</h6></button>
         </form>
     </div>
     <div class="col-md-9">
 
 	<div class="row-fluid" data-ng-repeat="course in courses">
         <div class="col-md-6" >
-            <div class="materia-box">
-            <div class="title-materia">
+            <div class="materia-box" >
+            <div class="title-materia" style="background-color:aqua">
                 <h5>{{course.name}} </h5>
 
 <!--                 <a class="boxclose" id="boxclose"></a>
  -->
-                <div data-ng-repeat="project in course.projects">
-                    <div class="row">
+                <div data-ng-repeat="project in course.projects" >
+                    <div class="row" >
                         <div class = "col-md-8 col-sm-8">
                             <a href="" data-ng-click="showProject(project.idProject)"  ng-init="index=0">
                              <h3>  {{ $index+1 }} {{project.projectName}} - </h3>
@@ -100,7 +101,7 @@
                    
                 </div>
 
-                <a href="" class="center btn btn-default" data-ng-click="addProject(course.idCourse)">Add projects</a>
+                <a href="" class="center btn btn-default" data-ng-click="addProject(course.idCourse)" style=" background-color: lightskyblue">Add projects</a>
             </div>
 
             <br class="clear" />
