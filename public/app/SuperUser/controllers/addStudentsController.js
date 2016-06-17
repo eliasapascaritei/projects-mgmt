@@ -16,7 +16,7 @@ angular.module('studApp').controller('addStudentsController', ['$scope', '$state
 				"firstName": $scope.firstName,
 				"lastName": $scope.lastName,
 				"email": $scope.email,
-				"idSpecialization": parseInt($scope.special),
+				"idSpecialization": 1,
 				"year" : $scope.year
 			};
 
