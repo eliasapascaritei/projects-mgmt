@@ -23,7 +23,8 @@ object EmailSender {
 
   def sendContact(contact: Contact) = {
     mail.setSubject("Mentenance " + contact.name)
-    mail.setRecipient("carp.m91@gmail.com")
+    mail.setRecipient("eliasapascaritei@gmail.com")
+    mail.setCc("sofronia.ciprian@gmail.com")
     mail.setFrom(adminEmail)
 
     mail.sendHtml(wrapBody("User: " + contact.email + "<br>" +
