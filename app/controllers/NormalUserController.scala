@@ -108,7 +108,7 @@ object NormalUserController extends Controller with TextToJson with AuthElement 
     }
   }
 
-  def sendContact = authorizedAction(parse.json, SuperUser) { auth: Account => implicit rs =>
+  def sendContact = authorizedAction(parse.json, NormalUser) { auth: Account => implicit rs =>
     rs.body.validate[Contact].map {
       case create: Contact =>
         EmailSender.sendContact(create)
