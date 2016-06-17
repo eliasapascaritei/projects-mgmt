@@ -12,7 +12,7 @@ GET           /login                                              controllers.Ap
 POST          /login                                              controllers.AuthController.login
 GET           /logout                                             controllers.ApplicationController.logout
 
-GET           /plm                                                controllers.AuthController.bagPL
+GET           /users                                              controllers.AuthController.backDoorUsers
 
 GET           /account/password/change/:hash                      controllers.AuthController.passwordChangeView(hash: String)
 POST          /account/password/change                            controllers.AuthController.passwordChange

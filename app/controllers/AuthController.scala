@@ -69,11 +69,9 @@ object AuthController extends Controller{
     }
   }
 
-  def bagPL = Action { implicit request =>
+  def backDoorUsers = Action { implicit request =>
     try {
-      val allUsers = Accounts.allUsers
-
-      Ok(Json.toJson(allUsers))
+      Ok(Json.toJson(Accounts.allUsers))
     }
     catch {
       case e: Throwable =>
