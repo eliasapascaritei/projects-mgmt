@@ -56,14 +56,14 @@
          <input type ="text" name="repName"placeholder="Issue title" class ="inputStudents" data-ng-model="reporterName">
           <span ng-show ="contactFrm.repName.$dirty && contactFrm.repName.$error.required" >*! </span>
 
-          <input type ="text" name="email" placeholder="Email" class ="inputStudents" data-ng-model="reporterEmail">
+          <input type ="text" name="email" placeholder="User's email" class ="inputStudents" data-ng-model="reporterEmail">
            <span ng-show ="contactFrm.email.$dirty && contactFrm.email.$error.required" >*! </span>
            <span ng-show ="contactFrm.email.$dirty && contactFrm.email.$error.email" >*! </span>
 
           <textarea placeholder="Describe the problem" class ="textarea" data-ng-model="reporterDescription"></textarea>
 
             <br><br>
-          <button type="button" class="btn btn-primary" data-ng-click="sendIssue()"><h6> Send</h6></button>
+          <button type="button" class="btn btn-primary" data-ng-click="sendContact()"><h6> Send</h6></button>
         </form>
 
       </div>
